@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="actionBarStyle">@style/ActionBar.Solid.SIS</item>
+    </style>
+
+    <style name="ActionBar.Solid.SIS"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/student_information_system</item>
+    </style>
+
+    <style name="SISTheme" parent="AppTheme">
+
+        <item name="actionBarStyle">
+            @style/ActionBar.Solid.SIS.NoTitle
+        </item>
+    </style>
+    
+    <style name="SISListStyle">
+    </style>
+    
+    <style name="ActionBar.Solid.SIS.NoTitle" parent="@style/ActionBar.Solid.SIS">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo"> @drawable/ic_launcher </item>
+    </style>
+</resources>
