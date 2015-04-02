@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Student Information System</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_logout">Logout</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">Register Activity</string>
+
+    <string name="semester_prompt">Choose Semester</string>
+    <string name="security_prompt">Choose a Question</string>
+
+    <string-array name="question_arrays">
+        <item>What is your Pet Name?</item>
+        <item>What is your Birth Place?</item>
+        <item>What is your Favourite City?</item>
+        <item>What is your Mother name?</item>
+        <item>What is your cast?</item>
+        <item>What is your Mother toung?</item>
+    </string-array>
+    <string name="title_activity_timetable">Timetable</string>
+    <string name="title_activity_timetable_detail">Timetable Detail</string>
+    <string name="title_activity_datesheet">Datesheet</string>
+    <string name="title_activity_datesheet_detail">Datesheet Detail</string>
+    <string name="title_activity_result">ResultActivity</string>
+
+
+    <string name="sync_account_type">sis.example.com</string>
+    <string name="content_authority">com.muh_sam.studentinformationsystem</string>
+</resources>
