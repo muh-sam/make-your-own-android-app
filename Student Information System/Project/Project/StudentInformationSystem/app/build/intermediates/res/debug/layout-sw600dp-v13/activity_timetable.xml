@@ -1,0 +1,26 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:background="@drawable/chalkboard"
+    tools:context = "com.muh_sam.studentinformationsystem.timetable.Timetable"
+    >
+    <fragment
+        android:id="@+id/fragment_timetable"
+        android:name="com.muh_sam.studentinformationsystem.timetable.TimetableFragment"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        tools:layout="@android:layout/list_content"
+        />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:id="@+id/timetable_detail_container"
+        />
+</LinearLayout><!-- From: file:/C:/Users/muh_s_000/AndroidStudioProjects/StudentInformationSystem/app/src/main/res/layout-sw600dp/activity_timetable.xml -->
