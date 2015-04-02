@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/list_item_sis_textview"
+    android:fontFamily="sans-serif-condensed"
+    android:textColor="#FFFFFF"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:textAppearance="?android:textAppearanceLarge"
+    android:gravity="center_vertical"
+    android:background="@drawable/touch_selector"
+    >
+
+</TextView><!-- From: file:/C:/Users/muh_s_000/AndroidStudioProjects/StudentInformationSystem/app/src/main/res/layout/list_item_sis.xml -->
