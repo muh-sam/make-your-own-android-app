@@ -1,0 +1,43 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chalkboard"
+    android:padding="16dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_subject_textview"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_gravity="center_horizontal"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/detail_date_textview"
+            android:layout_gravity="center_horizontal"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:id="@+id/detail_time_textview"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+</ScrollView>
+<!-- From: file:/C:/Users/muh_s_000/AndroidStudioProjects/StudentInformationSystem/app/src/main/res/layout/fragment_datesheet_detail.xml -->
