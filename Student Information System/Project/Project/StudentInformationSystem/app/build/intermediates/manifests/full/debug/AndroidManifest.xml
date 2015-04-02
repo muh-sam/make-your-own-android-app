@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.muh_sam.studentinformationsystem"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.muh_sam.studentinformationsystem.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.muh_sam.studentinformationsystem.data.SISProvider"
+            android:authorities="com.muh_sam.studentinformationsystem" />
+
+        <activity
+            android:name="com.muh_sam.studentinformationsystem.Security.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.muh_sam.studentinformationsystem.Security.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="com.muh_sam.studentinformationsystem.timetable.Timetable"
+            android:label="@string/title_activity_timetable"
+            android:parentActivityName="com.muh_sam.studentinformationsystem.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muh_sam.studentinformationsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.muh_sam.studentinformationsystem.timetable.TimetableDetailActivity"
+            android:label="@string/title_activity_timetable_detail"
+            android:parentActivityName="com.muh_sam.studentinformationsystem.timetable.Timetable" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".timetable.Timetable" />
+        </activity>
+        <activity
+            android:name="com.muh_sam.studentinformationsystem.Datesheet.DatesheetActivity"
+            android:label="@string/title_activity_datesheet"
+            android:parentActivityName="com.muh_sam.studentinformationsystem.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.muh_sam.studentinformationsystem.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.muh_sam.studentinformationsystem.Datesheet.DatesheetDetailActivity"
+            android:label="@string/title_activity_datesheet_detail"
+            android:parentActivityName="com.muh_sam.studentinformationsystem.Datesheet.DatesheetActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Datesheet.DatesheetActivity" />
+        </activity>
+
+        <service android:name="com.muh_sam.studentinformationsystem.sync.SISAuthenticatorService" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <!-- The SyncAdapter service -->
+        <service
+            android:name="com.muh_sam.studentinformationsystem.sync.SISSyncService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+    </application>
+
+</manifest>
